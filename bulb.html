@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bulb on and off</title>
+    <style>
+        button {
+            padding: 5px 8px;
+            background-color: #1156;
+            color: white;
+            border: 2px solid cyan;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .main{
+            position: relative;
+            /* border: 2px solid black; */
+            height: 270px;
+        }
+
+        #off {
+            position: absolute;
+            width: 264px;
+            height: 264px;
+            display: block;
+        }
+        
+
+        #on {
+            position: absolute;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div  class="main">
+    <img src="img/off.jpg" id="off" alt="">
+    <img src="img/onn.jpg " id="on" width="264px" alt="">
+</div>
+    <button onclick="document.getElementById('on').style='display:block;'">onn</button>
+    <button onclick="of()">off</button>
+
+    <script>
+        function of(){
+            document.getElementById('off').style='display:block;'
+            document.getElementById('on').style='display:none;'
+
+        }
+    </script>
+</body>
+
+</html>
